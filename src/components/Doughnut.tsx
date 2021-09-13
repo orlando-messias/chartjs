@@ -1,12 +1,17 @@
 import React from 'react';
 
 import { Doughnut } from 'react-chartjs-2';
+import { MainContainer, P, TitleP, PDiv } from './DoughnutStyles';
 
 const DoughnutChart = () => {
   return (
-    <div style={{width: '100px', display: 'flex', alignItems: 'center'}}>
-      <div style={{position: 'absolute', left: '40px', fontSize: '12px', fontWeight: 'bold'}}>25%</div>
-      <Doughnut 
+    <MainContainer>
+      <PDiv>
+        <P>Adesão</P>
+        <TitleP>Famílias</TitleP>
+      </PDiv>
+      <div style={{width: '100px', marginTop: '-5px'}}>
+      <Doughnut
         data={{
           datasets: [
             {
@@ -20,7 +25,10 @@ const DoughnutChart = () => {
           cutout: '70%',
         }}
       />
-    </div>  
+
+
+      </div>
+    </MainContainer>
   );
 };
 

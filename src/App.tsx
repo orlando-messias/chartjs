@@ -1,9 +1,9 @@
 import './App.css';
-import Doughnut from './components/Doughnut';
+import Routes from './Routes';
 
 function App() {
   return (
-    <Doughnut />
+    <Routes />
   );
 }
 
