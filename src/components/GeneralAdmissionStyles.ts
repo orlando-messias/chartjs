@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const MainContainer = styled.div`
-  width: 678px;
+  max-width: 678px;
   height: 139px;
   border-radius: 4px;
   border: 1px solid #EDEDED;
@@ -10,9 +10,10 @@ export const MainContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  padding: 5px;
 `;
 
-export const Title = styled.p`
+export const MainTitle = styled.p`
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
@@ -20,19 +21,37 @@ export const Title = styled.p`
   width: 95%;
 `;
 
-export const ChartDiv = styled.div`
-  width: 640px;
+export const ProgressBarContainer = styled.div`
+  max-width: 640px;
   height: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 `;
 
-export const Chart = styled.div`
+export const ProgressBar = styled.div`
   width: 580px;
   height: 10px;
   background-color: #EDEDED;
   border-radius: 10px;
+  margin-right: 10px;
+
+  @media(max-width: 1176px) {
+    width: 500px;
+  }
+
+  @media(max-width: 1056px) {
+    width: 450px;
+  }
+
+  @media(max-width: 1008px) {
+    width: 580px;
+  }
+
+  @media(max-width: 860px) {
+    width: 500px;
+  }
+  
 `;
 
 export const Level = styled.div`
@@ -40,7 +59,7 @@ export const Level = styled.div`
   height: 10px;
   background-color: #287D3C;
   border-radius: 10px;
-  position: absolute;
+  transition: 1s;
 `;
 
 export const Percentage = styled.p`
@@ -51,5 +70,5 @@ export const Percentage = styled.p`
 export const P = styled.p`
   font-size: 12px;
   font-weight: 400;
-  width: 638px;
+  max-width: 638px;
 `;
